@@ -14,6 +14,10 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Backend of Ema Jhon");
+});
+
 client.connect((err) => {
   const productsCollection = client.db("emaJhonStore").collection("products");
   const ordersCollection = client.db("emaJhonStore").collection("orders");
