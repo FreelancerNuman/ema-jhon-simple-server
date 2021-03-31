@@ -57,5 +57,4 @@ client.connect((err) => {
   });
 });
 
-const pass = "OVQMbVfEQnESKtf6";
-app.listen(port);
+app.listen(process.env.PORT || port);
